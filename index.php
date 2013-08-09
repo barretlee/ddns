@@ -17,7 +17,6 @@ require_once dirname(__file__).'/lib/getRecordID.php';
 require_once dirname(__file__).'/lib/getRemoteIP.php';
 require_once dirname(__file__).'/lib/getRecordIP.php';
 
-$filename = dirname(__file__).'/ip.txt';
 
 //获取域名ID
 $domain_id = getDomainID(DOMAIN);
