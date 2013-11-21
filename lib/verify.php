@@ -17,7 +17,7 @@ function verify(){
         "format"=>"json",
     );
 
-    $auth = post($post_data,'https://dnsapi.cn/Record.Modify');
+    $auth = post($post_data,'https://dnsapi.cn/User.Detail');
 
     $auth = json_decode($auth);
     
