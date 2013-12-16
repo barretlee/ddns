@@ -20,7 +20,7 @@ require_once dirname(__file__).'/lib/verify.php';
 require_once dirname(__file__).'/lib/changeRecord.php';
 require_once dirname(__file__).'/lib/getDomainID.php';
 require_once dirname(__file__).'/lib/getRecordID.php';
-require_once dirname(__file__).'/lib/getRemoteIP.php';
+require_once dirname(__file__).'/lib/getPublicIP.php';
 require_once dirname(__file__).'/lib/getRecordIP.php';
 
 //验证用户名、密码
@@ -51,7 +51,7 @@ $record_ip = getRecordIP($domain_id, RECORD);
 echo '当前record IP 为'.$record_ip.PHP_EOL;
 
 //获取当前的广域网IP地址
-$ip = getRemoteIP();
+$ip = getPublicIP();
 
 echo '当前广域网IP为：'.$ip.PHP_EOL;
 
