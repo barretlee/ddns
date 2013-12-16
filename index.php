@@ -53,6 +53,12 @@ echo '当前record IP 为'.$record_ip.PHP_EOL;
 //获取当前的广域网IP地址
 $ip = getPublicIP();
 
+//判断获取的公网IP地址是否合法
+if (!filter_var($ip, FILTER_VALIDATE_IP, FILTER_FLAG_IPV4)){
+    echo '获取的IP地址不是合法的公网IP,获取的IP地址为：'.$ip.PHP_EOL;
+    exit();
+}
+
 echo '当前广域网IP为：'.$ip.PHP_EOL;
 
 //如果当前广域网IP和DNSPOD注册IP不一样，则修改为当前广域网IP
